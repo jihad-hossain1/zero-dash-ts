@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        "rootDirs": ["src"],
+        "outDir": "build",
+       "types": ["node"],
+       "module": "ES6",
+    "target": "ES5",
+    "declaration": true,
+    "sourceMap": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "jsx": "react",
+    "skipLibCheck": true
+    },
+    "include": ["src"],
+    "exclude": ["node_modules"]
+}
