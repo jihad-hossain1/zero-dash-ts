@@ -2,8 +2,8 @@
   "name": "zero-dash-ts",
   "version": "0.0.1",
   "description": "javascript functional components",
-    "main": "build/index.js",
   "type": "module",
+  "main": "build/index.js",
   "types": "build/index.d.ts",
   "files": [
     "build",
@@ -11,10 +11,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jihadhossain/quill-image-vbd.git"
+    "url": "git+https://github.com/jihadhossain/zero-dash-ts.git"
   },
   "bugs": {
-    "url": "https://github.com/jihadhossain/quill-image-vbd/issues"
+    "url": "https://github.com/jihadhossain/zero-dash-ts/issues"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
