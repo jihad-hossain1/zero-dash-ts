@@ -29,4 +29,4 @@ function findNonDuplicateItems<T>(
         .map(entry => entry.item);
 }
 
-export { findNonDuplicateItems }
+export default findNonDuplicateItems 

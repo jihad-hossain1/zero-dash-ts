@@ -40,3 +40,35 @@ const uniqueCoursesByName = findNonDuplicateItems(
 );
 console.log("Unique courses by 'name':", uniqueCoursesByName);
 ```
+
+removeDuplicates
+
+```js
+// Example usage:
+interface Person {
+  id: number;
+  name: string;
+}
+
+const array1: Person[] = [
+  { id: 1, name: "Alice" },
+  { id: 2, name: "Bob" },
+];
+
+const array2: Person[] = [
+  { id: 2, name: "Bob" },
+  { id: 3, name: "Charlie" },
+];
+
+const uniqueItems = removeDuplicates("id", array1, array2);
+console.log(uniqueItems); // Output: [ { id: 1, name: 'Alice' }, { id: 3, name: 'Charlie' } ]
+```
+
+sanitized Array Methods
+
+```js
+// Example usage:
+const inputArray = [{ item: "abc" }, { item: "def" }, { item: "ghi" }];
+const sanitizedArray = toStringArray(inputArray, "item");
+console.log(sanitizedArray); // Output: ["abc", "def", "ghi"]
+```
