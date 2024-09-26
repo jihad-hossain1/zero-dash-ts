@@ -1,6 +1,6 @@
 {
   "name": "zero-dash-ts",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "javascript functional components",
   "type": "module",
   "main": "build/index.js",
