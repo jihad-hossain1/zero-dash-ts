@@ -3,6 +3,7 @@ import {removeDuplicates, removeDuplicatesCompare} from './array-method/removeDu
 import { toStringArray, toObjectArray } from './array-method/sanitizedArray.js';
 import { formatKeys, formatKeysWithRemoveKeys } from './object-method/formatObject.js'
 import toStringArrayDuplicate from './array-method/sanitizedRemoveDuplicate.js'
+import {countDuplicatesAndUniqueByKey} from './array-method/findDuplicate.js'
 
 
-export { findNonDuplicateItems, removeDuplicates,removeDuplicatesCompare, toStringArray, toObjectArray, formatKeys, formatKeysWithRemoveKeys, toStringArrayDuplicate };
+export { findNonDuplicateItems, removeDuplicates,removeDuplicatesCompare,countDuplicatesAndUniqueByKey, toStringArray, toObjectArray, formatKeys, formatKeysWithRemoveKeys, toStringArrayDuplicate };
