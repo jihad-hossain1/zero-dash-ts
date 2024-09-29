@@ -1,10 +1,13 @@
 ## Overview
-The `Zero Dash Ts`  is a TypeScript utility designed to extract specified properties  array , objects. 
+
+The `Zero Dash Ts` is a TypeScript utility designed to extract specified properties array , objects.
 
 ## Table of Contents
+
 - [Installation](#installation)
 
 ## Installation
+
 To use the `Zero Dash Ts` function, ensure you have TypeScript set up in your project. You can then import the function from its module:
 
 ```bash
@@ -19,5 +22,8 @@ npm install zero-dash-ts
 - [Sanitized Array items](./src/array-method/gest/sanitizedArray.md)
 
 ## Object Method
+
 - [Format Keys](./src/object-method/gest/formatObject.md)
 - [Format Keys With Remove Keys](./src/object-method/gest/formatKeysWithRemoveKeys.md)
+- [Remove Properties](./src/object-method/gest/removeProperties.md)
+- [Remove Nested Properties](./src/object-method/gest/removeNestedProperties.md)
