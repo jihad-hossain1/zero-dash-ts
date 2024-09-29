@@ -44,19 +44,3 @@ type CountDuplicatesResult<T> = {
   
   export {countDuplicatesAndUniqueByKey}
 
-  
-  // Example usage
-//   const data = [
-//     { id: 1, name: "Alice" },
-//     { id: 2, name: "Bob" },
-//     { id: 3, name: "Alice" },
-//     { id: 4, name: "Charlie" },
-//     { id: 5, name: "Bob" }
-//   ];
-  
-//   const result = countDuplicatesAndUniqueByKey(data, "name");
-//   console.log(result.duplicates); 
-//   // Output: [ { name: 'Alice', id: 1, count: 2 }, { name: 'Bob', id: 2, count: 2 } ]
-//   console.log(result.uniqueValues); 
-//   // Output: [ { name: 'Charlie', id: 4 } ]
-  
