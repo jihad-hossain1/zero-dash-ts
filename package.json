@@ -1,6 +1,6 @@
 {
   "name": "zero-dash-ts",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "javascript functional components",
   "type": "module",
   "main": "build/index.js",
@@ -16,10 +16,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jihadhossain/zero-dash-ts.git"
+    "url": "git+https://github.com/jihad-hossain1/zero-dash-ts.git"
   },
   "bugs": {
-    "url": "https://github.com/jihadhossain/zero-dash-ts/issues"
+    "url": "https://github.com/jihad-hossain1/zero-dash-ts/issues"
   },
   
   "keywords": [

@@ -1,31 +1,41 @@
 type CountDuplicatesResult<T> = {
-    duplicates: { value: T[keyof T]; count: number }[];
-    uniqueValues: { value: T[keyof T] }[];
+    duplicates: (T & { count: number })[]; // Original object with a count property
+    uniqueValues: T[]; // Original object as is
   };
   
   function countDuplicatesAndUniqueByKey<T>(arr: T[], key: keyof T): CountDuplicatesResult<T> {
-    const counts: { [key: string]: { value: T[keyof T], count: number } } = {};
-    const duplicates: { value: T[keyof T]; count: number }[] = [];
-    const uniqueValues: { value: T[keyof T] }[] = [];
+    const counts: { [key: string]: number } = {};
+    const duplicates: (T & { count: number })[] = [];
+    const uniqueValues: T[] = [];
   
     // Calculate counts for each value
     for (const item of arr) {
       const keyValue = item[key];
       if (keyValue != null) {
         const value = String(keyValue);
-        if (!counts[value]) {
-          counts[value] = { value: keyValue, count: 0 };
-        }
-        counts[value].count += 1;
+        counts[value] = (counts[value] || 0) + 1;
       }
     }
   
     // Separate duplicates and unique values based on counts
-    for (const countObj of Object.values(counts)) {
-      if (countObj.count > 1) {
-        duplicates.push(countObj); // Add as duplicate
-      } else {
-        uniqueValues.push({ value: countObj.value }); // Add as unique value
+    const seenDuplicates = new Set<string>();
+    const seenUniqueValues = new Set<string>();
+  
+    for (const item of arr) {
+      const keyValue = item[key];
+      if (keyValue != null) {
+        const value = String(keyValue);
+        if (counts[value] > 1) {
+          if (!seenDuplicates.has(value)) {
+            duplicates.push({ ...item, count: counts[value] }); // Add the full object with count
+            seenDuplicates.add(value);
+          }
+        } else {
+          if (!seenUniqueValues.has(value)) {
+            uniqueValues.push(item); // Add the full object as unique value
+            seenUniqueValues.add(value);
+          }
+        }
       }
     }
   
@@ -33,19 +43,4 @@ type CountDuplicatesResult<T> = {
   }
   
   export {countDuplicatesAndUniqueByKey}
-  // Example usage
-//   const data = [
-//     { id: 1, name: "Alice" },
-//     { id: 2, name: "Bob" },
-//     { id: 3, name: "Alice" },
-//     { id: 4, name: "Charlie" },
-//     { id: 5, name: "Bob" }
-//   ];
-  
-//   const result = countDuplicatesAndUniqueByKey(data, "name");
-//   console.log(result.duplicates); 
-//   // Output: [ { value: 'Alice', count: 2 }, { value: 'Bob', count: 2 } ]
-//   console.log(result.uniqueValues); 
-//   // Output: [ { value: 'Charlie' } ]
-  
-  
+
