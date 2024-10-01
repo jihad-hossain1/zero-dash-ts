@@ -18,7 +18,7 @@ The `toStringArray` function takes an array of objects and a specific property n
 #### Example Usage:
 
 ```typescript
-import { toStringArray } from './path/to/your/module';
+import { toStringArray } from 'zero-dash-ts';
 
 const data = [
   { id: 1, name: 'Alice' },

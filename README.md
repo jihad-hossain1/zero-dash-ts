@@ -20,6 +20,8 @@ npm install zero-dash-ts
 - [Remove Duplicate with compare](./src/array-method/gest/removeDuplicates_and_removeDuplicatesCompare_description.md)
 - [Find Non Duplicates](./src/array-method/gest/findNonDuplicateItems_description.md)
 - [Sanitized Array items](./src/array-method/gest/sanitizedArray.md)
+- [Replace Object Keys in Array](./src/array-method/gest/replaceObjectKeysOfArray.md)
+- [Count Duplicates And Unique By Key](./src/array-method/gest/findDuplicate.md)
 
 ## Object Method
 
@@ -27,3 +29,4 @@ npm install zero-dash-ts
 - [Format Keys With Remove Keys](./src/object-method/gest/formatKeysWithRemoveKeys.md)
 - [Remove Properties](./src/object-method/gest/removeProperties.md)
 - [Remove Nested Properties](./src/object-method/gest/removeNestedProperties.md)
+- [Replace object keys properties](./src/object-method/gest/replaceKeysObject.md)
