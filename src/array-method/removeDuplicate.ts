@@ -19,4 +19,17 @@ function removeDuplicates<T>(
   return combinedArray.filter(item => propertyCountMap.get(item[property]) === 1);
 }
 
-export default removeDuplicates;
+function removeDuplicatesCompare<T>(
+  property: keyof T, // The property to check for uniqueness
+  availableItem: T[],
+  compareItem: T[]
+): T[] {
+  // Create a Set of the unique property values from compareItem
+  const compareItemSet = new Set(compareItem.map(item => item[property]));
+
+  // Filter the availableItem array to only include items whose property value is not in compareItemSet
+  return availableItem.filter(item => !compareItemSet.has(item[property]));
+}
+
+
+export  {removeDuplicates, removeDuplicatesCompare};

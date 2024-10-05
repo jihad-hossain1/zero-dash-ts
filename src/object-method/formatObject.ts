@@ -70,4 +70,3 @@ export const formatKeys = (obj: FormattableObject): FormattableObject => {
   
     return formattedObj;
   };
-  

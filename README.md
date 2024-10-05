@@ -1,74 +1,32 @@
-#### For Find Non Duplicate value from an Combine or single array
+## Overview
 
-```js
-type Course = {
-  [key: string]: any, // A generic type to support dynamic properties
-};
+The `Zero Dash Ts` is a TypeScript utility designed to extract specified properties array , objects.
 
-// Example usage with dynamic property:
+## Table of Contents
 
-const studentCourse1 = [
-  { xitemcode: "C101", name: "Math" },
-  { xitemcode: "C102", name: "English" },
-];
+- [Installation](#installation)
 
-const studentCourse2 = [
-  { xitemcode: "C103", name: "Science" },
-  { xitemcode: "C101", name: "Math" },
-];
+## Installation
 
-const studentCourse3 = [
-  { xitemcode: "C104", name: "History" },
-  { xitemcode: "C105", name: "Art" },
-];
+To use the `Zero Dash Ts` function, ensure you have TypeScript set up in your project. You can then import the function from its module:
 
-// Get non-duplicate courses based on 'xitemcode'
-const uniqueCoursesByXitemcode = findNonDuplicateItems(
-  "xitemcode",
-  studentCourse1,
-  studentCourse2,
-  studentCourse3
-);
-console.log("Unique courses by 'xitemcode':", uniqueCoursesByXitemcode);
-
-// If you want to find non-duplicate items based on a different property, for example, 'name'
-const uniqueCoursesByName = findNonDuplicateItems(
-  "name",
-  studentCourse1,
-  studentCourse2,
-  studentCourse3
-);
-console.log("Unique courses by 'name':", uniqueCoursesByName);
+```bash
+npm install zero-dash-ts
 ```
 
-removeDuplicates
+## Array Method
 
-```js
-// Example usage:
-interface Person {
-  id: number;
-  name: string;
-}
+- [Count Duplicates And Uniques By Key](./src/array-method/gest/countDuplicatesAndUniquesByKey.md)
+- [Remove Duplicate with compare](./src/array-method/gest/removeDuplicates_and_removeDuplicatesCompare_description.md)
+- [Find Non Duplicates](./src/array-method/gest/findNonDuplicateItems_description.md)
+- [Sanitized Array items](./src/array-method/gest/sanitizedArray.md)
+- [Replace Object Keys in Array](./src/array-method/gest/replaceObjectKeysOfArray.md)
+- [Count Duplicates And Unique By Key](./src/array-method/gest/findDuplicate.md)
 
-const array1: Person[] = [
-  { id: 1, name: "Alice" },
-  { id: 2, name: "Bob" },
-];
+## Object Method
 
-const array2: Person[] = [
-  { id: 2, name: "Bob" },
-  { id: 3, name: "Charlie" },
-];
-
-const uniqueItems = removeDuplicates("id", array1, array2);
-console.log(uniqueItems); // Output: [ { id: 1, name: 'Alice' }, { id: 3, name: 'Charlie' } ]
-```
-
-sanitized Array Methods
-
-```js
-// Example usage:
-const inputArray = [{ item: "abc" }, { item: "def" }, { item: "ghi" }];
-const sanitizedArray = toStringArray(inputArray, "item");
-console.log(sanitizedArray); // Output: ["abc", "def", "ghi"]
-```
+- [Format Keys](./src/object-method/gest/formatObject.md)
+- [Format Keys With Remove Keys](./src/object-method/gest/formatKeysWithRemoveKeys.md)
+- [Remove Properties](./src/object-method/gest/removeProperties.md)
+- [Remove Nested Properties](./src/object-method/gest/removeNestedProperties.md)
+- [Replace object keys properties](./src/object-method/gest/replaceKeysObject.md)
