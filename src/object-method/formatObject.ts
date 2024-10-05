@@ -71,27 +71,3 @@ export const formatKeys = (obj: FormattableObject): FormattableObject => {
     return formattedObj;
   };
   
-  // Specify the keys you want to remove
-  // const keysToRemove = ['email', 'birtDate', 'phoneNumber'];
-  
-  // const formattedFields = formatKeys(fields, keysToRemove);
-  // console.log(formattedFields);
-
-    
-  // Specify the keys you want to remove
-  
-  // const fields = {
-  //   inquery: '',
-  //   doctorName: 'Dr. Smith',
-  //   treatmentInterest: '',
-  //   question: 'What is the treatment?',
-  //   hospitalNumber: null,
-  //   firstName: 'John',
-  //   lastName: 'Doe',
-  //   email: '',
-  //   phoneNumber: undefined,
-  //   birtDate: '',
-  //   gender: 'Male',
-  //   citizenship: '',
-  //   country: ''
-  // };
